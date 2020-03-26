@@ -1,4 +1,4 @@
-import java.util.
+import java.util.*;
 class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
