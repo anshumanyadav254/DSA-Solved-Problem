@@ -8,7 +8,7 @@
 		{
 		    arr[i]=sc.nextInt();
 		}
-		int l=0,h=n+1;
+		int l=0,h=n-1;
 		int x=sc.nextInt();
 		System.out.println(Binary_search(arr,l,h,x));
 		
@@ -19,7 +19,7 @@
 	    {
 	        return -1;
 	    }
-	    int mid=(l+h)/2;
+	    int mid=l+(h-l)/2;
 	    
 	    if(arr[mid]==x)
 	    {
