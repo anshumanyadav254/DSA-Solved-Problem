@@ -41,3 +41,4 @@ class Codechef
 }
 // I/P :n=4 arr[]=2 3 3 3; x=3;
 // O/P : 1
+// Array should be in sorted order
