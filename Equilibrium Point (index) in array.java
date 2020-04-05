@@ -33,3 +33,4 @@ class Main
 
     }
 }
+// if in array if sum of element in left side equal to sum of element right side that index is called equilibroum point
