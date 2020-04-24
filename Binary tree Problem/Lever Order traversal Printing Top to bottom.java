@@ -1,3 +1,14 @@
+import java.util.LinkedList;
+import java.util.Queue;
+class Node{
+	int data;
+	Node left;
+	Node right;
+	Node(int k)
+	{
+		data=k;
+	}
+}
 public class PrintLevel
 {
 	public static void main(String args[]) {
