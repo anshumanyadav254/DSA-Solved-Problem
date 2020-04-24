@@ -21,7 +21,7 @@ public class PrintLevel
 		//LevelTravesal(root);
 		System.out.println(maxVlue(root));
 	}
-  static int maxValue(Node root)
+         static int maxValue(Node root)
 	{
 		if(root==null){
 			return Integer.MIN_VALUE;
@@ -31,6 +31,30 @@ public class PrintLevel
 		}
 
 	}
+	// Finding  max Value using Iterative Using Queue
+	static int MaxusingQueue(Node root) 
+	{
+		Queue<Node> q = new LinkedList<Node>();
+		q.add(root);
+		int res = Integer.MIN_VALUE;
+		while (q.isEmpty() == false) {
+			Node curr = q.poll();
+
+			if (curr.left != null) {
+				q.add(curr.left);
+
+			}
+			if (curr.right != null) {
+				q.add(curr.right);
+			}
+			if (curr.data > res) {
+				res = curr.data;
+			}
+
+
+		}
+		return res;
+	}	
 	
 
 
