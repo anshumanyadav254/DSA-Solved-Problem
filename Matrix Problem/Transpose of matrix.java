@@ -8,7 +8,7 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		// your code goes here
-		Scanner sc=new Scanner(System.in);
+	Scanner sc=new Scanner(System.in);
         int  t= sc.nextInt();
         while(t-->0)
         {
@@ -38,7 +38,7 @@ class Codechef
 	{
 	    for(int i=0;i<n;i++)
 	    {
-	        for(int j=1;j<n;j++)
+	        for(int j=i+1;j<n;j++)
 	        {
 	            int temp=arr[i][j];
 	            arr[i][j]=arr[j][i];
