@@ -44,6 +44,37 @@ static int maxlevel=0;
 		printLeft(root,1);
 	}
  }
- 
+ // using Queue by iteration
+
+static void PrintleftUsingIter(Node root)
+	{
+		if(root==null)
+		{
+			return;
+		}
+
+		Queue<Node> q=new LinkedList<Node>();
+		q.add(root);
+		while(q.isEmpty()==false)
+		{
+			int count=q.size();
+			for(int i=0;i<count;i++)
+			{
+				Node curr =q.poll();
+				if(i==0){
+					System.out.print(curr.data+" ");
+
+				}
+				if(curr.left!=null)
+				{
+					q.add(curr.left);
+				}
+				if(curr.right!=null)
+				{
+					q.add(curr.right);
+				}
+
+			}
+		}
  
  // out put =10 20 40 70 
