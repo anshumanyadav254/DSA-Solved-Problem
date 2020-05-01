@@ -114,3 +114,5 @@ public class MaxWidth
     }
 
 }
+
+// output of spiral form of tree is= 10 30 20 40 32 50 70 
