@@ -1,3 +1,5 @@
+
+
 class Node{
 	int data;
 	Node next;
@@ -13,6 +15,8 @@ class LinkedList{
 		temp.next=head;
 		head=temp;
 	}
+	// Brout Force aproach
+	
 	void PrintMiddle()
 	{
 		if(head==null)
