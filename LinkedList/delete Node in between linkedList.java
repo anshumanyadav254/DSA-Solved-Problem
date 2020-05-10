@@ -4,3 +4,4 @@
     }
     
     // it is only for deleting node rather than last node
+// ptr is node which i want to delete
