@@ -12,18 +12,20 @@ public class ZeroSumSubArray {
 			arr[i]=sc.nextInt();
 
 		}
-		//System.out.println(isZerosumNaiv(arr,n));
-		System.out.println(ZeroSumSubarray(arr,n));
+		int sum=sc.nextInt();
+		System.out.println(isSumInSubArrayNaiv(arr,n,sum));
+		//System.out.println(IsSumSubarray(arr,n,sum));
 	}
-	static boolean isZerosumNaiv(int arr[],int n)
+	static boolean isSumInSubArrayNaiv(int arr[],int n,int sum)
 	{
-		int curr_sum=0;
+
 		for(int i=0;i<n;i++)
 		{
+			int curr_sum=0;
 			for(int j=i;j<n;j++)
 			{
-				curr_sum=curr_sum+arr[i]+arr[j];
-				if(curr_sum==0)
+				curr_sum+=arr[j];
+				if(curr_sum==sum)
 				{
 					return  true;
 				}
@@ -33,23 +35,25 @@ public class ZeroSumSubArray {
 		}
 		return false;
 	}
-	static boolean ZeroSumSubarray(int arr[],int n)
+	static boolean IsSumSubarray(int arr[],int n,int sum)
 	{
 		HashSet<Integer>s=new HashSet<Integer>();
 		int PreSum=0;
 		for(int i=0;i<n;i++)
 		{
 			PreSum=PreSum+arr[i];
-			if(s.contains(PreSum))
+			if(PreSum==sum)
 			{
 				return true;
 			}
-			if(PreSum==0)
+			if(s.contains(PreSum-sum))
 			{
 				return true;
 			}
+
 			s.add(PreSum);
 		}
 		return false;
 	}
 }
+
