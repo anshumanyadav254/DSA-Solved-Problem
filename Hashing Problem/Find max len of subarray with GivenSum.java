@@ -21,7 +21,7 @@ public class LengthOfSumOfSubArray
 		{
 			for(int j=i;j<n;j++)
 			{
-				curr_sum+=arr[i];
+				curr_sum+=arr[j];
 				if(curr_sum==sum)
 				{
 					res=Math.max(res,j-i+1);
