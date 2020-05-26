@@ -39,3 +39,4 @@ class Codechef
 	    return true;
 	}
 }
+// input.  s1= tea s2=eta output= yes
