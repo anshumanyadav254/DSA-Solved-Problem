@@ -1,6 +1,6 @@
 # In This Repository My all Solved Data Structure and Algorithm interview Problems.
 # Table of Content 
-1.Arrays
+# 1.Arrays
 2.LinkedList
 3.Binary Tree
 4.Binary Search Tree
