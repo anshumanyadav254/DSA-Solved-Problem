@@ -1,3 +1,4 @@
+/* package codechef; // don't place package name! */
 import java.util.*;
 import java.util.Arrays;
 class Codechef
@@ -52,20 +53,25 @@ class Codechef
         {
             if(left[i]<=right[j])
             {
-                arr[k++]=left[i++];
+                arr[k]=left[i];
+                k++;i++;
             }
             else{
-                arr[k++]=right[j++];
+                arr[k]=right[j];
+                k++;j++;
             }
         }
         while(i<n1){
-            arr[k++]=right[j++];
+            arr[k]=left[i];
+            k++;i++;
         }
         while(j<n2){
-            arr[k++]=right[j++];
+            arr[k]=right[j];
+            k++;j++;
         }
         
     }
     
 }
+
 // outPut=[20, 15, 10, 5]
