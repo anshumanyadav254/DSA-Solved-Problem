@@ -25,13 +25,13 @@ public static void main(String args[])
  {   
     if(l<h)
     {
-        int p=Partition(arr,l,h);
-        QuickSort(arr,l,p);
+        int p=LumutoPartition(arr,l,h); // change here HorsePartition(arr,l,h)
+        QuickSort(arr,l,p-1);// change here QuickSort(arr,l,p) for horse Partition
         QuickSort(arr,p+1,h);
     }
     
 }
- static int Partition(int arr[],int l,int h)
+ static int HorsePartition(int arr[],int l,int h)
  {
     int pivot=arr[l];
     int i=l-1;
@@ -53,6 +53,24 @@ public static void main(String args[])
     }
     
  }
+ static int LumutoPartition(int arr[],int l,int h){
+     int pivot=arr[h];
+     int i=l-1;
+     for(int j=l;j<h;j++){
+         if(arr[j]<pivot){
+            i++;
+            int tmp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=tmp;
+         }
+         
+     }
+     int temp=arr[i+1];
+    arr[i+1]=arr[h];
+     arr[h]=temp;
+     return i+1;
+ }
 
 }
+
 
