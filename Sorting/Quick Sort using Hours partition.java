@@ -1,3 +1,6 @@
+/* package codechef; // don't place package name! */
+import java.util.*;
+class codechef
 {
 
 public static void main(String args[])
@@ -52,3 +55,4 @@ public static void main(String args[])
  }
 
 }
+
